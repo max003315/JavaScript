@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01functionMethod.html</title>
+</head>
+
+<body>
+    <script>
+        //==========定義函數==================
+        //方法一函數宣告，定義帶參數的函數
+        function abc() {
+            return "hello word!";
+
+        }
+        function cdf() { };
+        const f = cdf
+        console.log(abc());
+        console.log(f());
+
+        //   function abc (numb,name="gers"){
+        //         // name = name || "grest";
+        //          return(`hello my name is ${name},my yers is ${numb}yers old.`);
+
+        //   }
+        //   let def = abc();
+        //   console.log(def)
+        //   let ttt = abc(15,"jack");
+        //   console.log(ttt)
+        //==========函數呼叫==================
+        //呼叫帶參數的函數
+
+
+
+        //JavaScript沒有規定function的參數及呼叫function時給予的參數數量必須要一致
+        //少掉的參數為undefined，而多的參數會被忽略
+
+        //函數的引數 
+
+        //預設參數值(ES6)
+
+        //其餘運算子 
+        // function sumAll(a,b,...ab) {
+        //     // console.log(ab.length)
+        //     // console.log(ab[0]);
+        //     let sum=a+b;
+        //     for(let p=0,max=ab.length;p<max;p++)
+        //     {
+        //         sum+=ab[p]
+        //         console.log(sum);
+        //     }
+        //     return sum;
+        // }
+        // sumAll(1,2)
+        // sumAll(1,2,3,4)
+        //==========定義函數==================
+        //方法二暱名函數
+        //            let sumabc= function (a,b,...ab) {
+        //             // console.log(ab.length)
+        //             // console.log(ab[0]);
+        //             let sum=a+b; // 3
+        //             for(let p=0,max=ab.length;p<max;p++)
+        //             {
+        //                 sum+=ab[p] //3+2 5 5+2 7
+
+        //             }
+        //             return sum;
+        //         }
+
+        // console.log( sumabc(1,2));
+        // console.log(sumabc(1,2,3,4));
+
+        //==========定義函數==================
+        //方法三箭頭函數(arrow function)
+
+        let sumabc = (a, b, ...ab) => {
+            // console.log(ab.length)
+            // console.log(ab[0]);
+            let sum = a + b; // 3
+            for (let p = 0, max = ab.length; p < max; p++) {
+                sum += ab[p] //3+2 5 5+2 7
+
+            }
+            return sum;
+        }
+
+        console.log(sumabc(1, 2));
+        console.log(sumabc(1, 2, 3, 4));
+        //函數沒有參數
+
+        //如果statement 只有一行，return 和 {} 可省略
+        let sayHi = name => `Hello ${name}!!`;
+
+        console.log(sayHi("Jack"));
+
+
+
+        //只有一個參數，()可省略
+
+
+        //===========IIFE=====================
+        let ff = function (name) {
+            console.log("hello!" + name);
+        }("marry");
+        (function (name) {
+            console.log("hello" + name);
+
+        }("jack"));
+
+        (function (abc) {
+            console.log(`hello${abc}`);
+        })("cindy")
+
+    </script>
+</body>
+
+</html>

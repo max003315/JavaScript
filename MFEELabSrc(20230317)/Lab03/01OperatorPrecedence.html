@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01OperatorPrecedence.html</title>
+</head>
+
+<body>
+    <script>
+        //算術運算子++
+        // let a = 10
+        // let b = 10
+        //b = b*++a //++ a=a+1 110 
+        //  b = b*a++  //100
+        // b= b*--a //90 a= a-1 9
+        // b= b*a-- // a= 10 
+        // console.log(b)
+        // console.log(a)
+
+        //關係運算子
+
+        // console.log(10 == "10") //true
+        // console.log(10 === "10") //false
+        // console.log(undefined == null) // true
+        // console.log(undefined === null) //false
+        // console.log(0 == "")
+        // console.log(0 === "")
+        //值相等== 
+        //值及資料類型相等===
+
+        //邏輯運算子
+        // console.log(false || true); //true
+        // console.log(false && true); //false
+        // console.log(true || false);//true
+        // console.log(true && false); //false
+        // let e = "abc";
+        // console.log(3 || 5);
+
+        //三元運算子（判斷式）?（真時回傳值）:（假時回傳值）
+        // let x = 18;
+        // let z = x = 18 ? "成年" : "未成年";
+        // console.log(z);
+        //parseInt 取整數 .prompt為輸入框
+        const age = parseInt(window.prompt("請輸入年紀", 18));
+        const result = age >= 18 ? "成年" : "未成年";
+        window.alert(result);
+    </script>
+
+</body>
+
+</html>

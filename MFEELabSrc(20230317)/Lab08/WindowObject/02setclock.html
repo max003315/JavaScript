@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>02setclock.html</title>
+</head>
+
+<body>
+    <img alt="" src="WinImages/0.gif" /><img alt="" src="WinImages/1.gif" />:<img alt="" src="WinImages/2.gif" /><img
+        alt="" src="WinImages/3.gif" />
+    <hr>
+    <!--
+    <img alt="" id="picH1" /><img alt="" id="picH2" />:<img alt="" id="picM1" /><img alt="" id="picM2" />:<img alt="" id="picS1" /><img alt="" id="picS2" />
+    -->
+
+
+    <div id="div1">00:00:00</div>
+    <input type="button" id="button1" value="Start">
+    <script>
+        //建立日期
+
+        //取得秒數，分割為兩位數
+
+
+        //顯示圖片，對應秒數
+
+        //找到要控制的對象
+        let btn = document.getElementById("button1")
+        let divClo = document.getElementById("div1")
+        //在使用者甚麼行為下 事件
+        btn.addEventListener("click", () => {
+            //做甚麼事
+            if (btn.value === "Start") {
+                btn.value = "Stop";
+                let timer = window.setInterval(() => {
+                    const today = new Date();
+                    const hours = today.getHours();
+                    const min = today.
+                }
+                )
+            } else {
+                btn.value = "Start";
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>03locationObject.html</title>
+</head>
+
+<body>
+    <button onclick="location.href='https://www.ispan.com.tw';">ispan(href)</button>
+    <button onclick="location.replace('https://www.ispan.com.tw');">ispan(replace)</button>
+    <script>
+        console.log("location information:");
+        console.log("location protocol=" + location.protocol);
+        console.log("location hostname=" + location.hostname);//http:   
+        console.log("location port=" + location.port); //窗口,埠 //5501
+        console.log("location host=" + location.host); //127.0.0.1
+        console.log("location pathname=" + location.pathname); //127.0.0.1:5501
+        console.log("location hash=" + location.hash);// #書籤 回到特定位址
+        console.log("location search" + location.search);//?搜尋資料庫關鍵字        
+
+    </script>
+</body>
+
+</html>

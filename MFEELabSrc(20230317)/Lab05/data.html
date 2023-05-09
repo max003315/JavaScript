@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="text"></div>
+    <script src="/data.js/datatype.js"></script>
+    <script>
+        let str = "";
+        datas.infos.forEach(element => {
+            const { Name, Toldescribe, TYWebsite } = element;
+            str += `
+            <h3><a href=${TYWebsite}>${Name}</a></h3>
+            <p>${Toldescribe.substr(0, 100)}...</p>
+            `
+        });
+        document.getElementById("text").innerHTML = str;
+    </script>
+</body>
+
+</html>

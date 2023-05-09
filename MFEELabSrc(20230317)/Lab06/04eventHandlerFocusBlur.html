@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>04eventHandlerFocusBlur.html</title>
+</head>
+
+<body>
+    <label>name:</label><input type="text" id="idName" />
+    <br />
+    <label>password:</label><input type="password" id="idPwd" />
+    <hr />
+    <label>縣市:</label>
+    <select id="idaddr">
+        <option value="1" selected>台北市</option>
+        <option value="2">新北市</option>
+        <option value="3">桃園市</option>
+    </select>
+    <script> let evt = document.getElementById("idName")
+        let cng = document.getElementById("idaddr")
+        evt.addEventListener("blur", blur);  //事件繫結，焦點離開
+        evt.addEventListener("focus", focus);  //事件繫結，取得焦點
+        evt.addEventListener("change", change);  //事件繫結，改變內容            
+        cng.addEventListener("change", Addrchange);
+
+        function blur() {
+            console.log("blur");
+        }
+
+        function focus() {
+            console.log("focus");
+        }
+
+        function change() {
+            console.log("change");
+        }
+        function Addrchange() {
+            console.log("change");
+        }       
+    </script>
+</body>
+
+</html>

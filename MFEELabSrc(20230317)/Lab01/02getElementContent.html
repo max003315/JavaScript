@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01getElementContent.html</title>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <script>
+        // var ele = document.getElementById("myDiv")
+        // ele.innerHTML = "<h2>hello</h2>";
+        // ele.innerHTML += "<h2>javasvript</h2>";
+        try {
+            const myDiv = document.getElementsById("myDivx");
+            myDiv.innerHTML = "JavaScript";
+        }
+        catch (error) {
+            console.log(error.message);
+        }
+        finally {
+            console.log("end");
+        }
+        let numd = "hello";
+        window.alert(numd);
+    </script>
+</body>
+
+</html>
